@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "GameTracker",
+    "slug": "game-tracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "gametracker",
+    "splash": {
+      "backgroundColor": "#0f172a"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gametracker.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Permitir acesso à câmera para tirar fotos das capas dos jogos.",
+        "NSPhotoLibraryUsageDescription": "Permitir acesso à galeria para escolher imagens dos jogos.",
+        "NSUserTrackingUsageDescription": "Este identificador será usado para entregar anúncios personalizados para você."
+      }
+    },
+    "android": {
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.gametracker.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permitir acesso à câmera para tirar fotos das capas dos jogos."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Permitir acesso à galeria para escolher capas dos jogos.",
+          "cameraPermission": "Permitir acesso à câmera para tirar fotos das capas."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Permitir $(PRODUCT_NAME) a acessar suas fotos.",
+          "savePhotosPermission": "Permitir $(PRODUCT_NAME) a salvar fotos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      "expo-notifications"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id-here"
+      }
+    }
+  }
+}
